@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical"
+    android:background="@drawable/bottom_sheet_bg"
+    >
+
+    <LinearLayout
+        android:id="@+id/privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+            app:srcCompat="@drawable/info_ic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#191919"
+            android:text="Privacy policy" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/about_dev"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+            app:srcCompat="@drawable/developer_ic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="#191919"
+            android:text="About Developer" />
+    </LinearLayout>
+</LinearLayout>
