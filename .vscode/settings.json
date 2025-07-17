@@ -1,0 +1,11 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "disabled",
+    "files.exclude": {
+        "**/build": true,
+        "**/.gradle": true
+    },
+    "kotlin.languageServer.enabled": true,
+    "android.home": "${env:ANDROID_HOME}",
+    "gradle.nestedProjects": true
+}

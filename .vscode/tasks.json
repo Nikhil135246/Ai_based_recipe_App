@@ -1,0 +1,137 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Android App",
+			"type": "shell",
+			"command": ".\\gradlew",
+			"args": [
+				"assembleDebug"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$gradle"
+			],
+			"isBackground": false,
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "Install Android App",
+			"type": "shell",
+			"command": ".\\gradlew",
+			"args": [
+				"installDebug"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$gradle"
+			],
+			"isBackground": false,
+			"dependsOn": "Build Android App",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "Build and Run Android App",
+			"type": "shell",
+			"command": ".\\gradlew",
+			"args": [
+				"installDebug"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [
+				"$gradle"
+			],
+			"isBackground": false,
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "Clean Project",
+			"type": "shell",
+			"command": ".\\gradlew",
+			"args": [
+				"clean"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$gradle"
+			],
+			"isBackground": false,
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "Launch App on Device",
+			"type": "shell",
+			"command": "adb",
+			"args": [
+				"shell",
+				"am",
+				"start",
+				"-n",
+				"com.example.niksracipes/.MainActivity"
+			],
+			"group": "test",
+			"isBackground": false,
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "View App Logs",
+			"type": "shell",
+			"command": "adb",
+			"args": [
+				"logcat",
+				"-v",
+				"brief",
+				"-s",
+				"NiksRacipes"
+			],
+			"group": "test",
+			"isBackground": true,
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		}
+	]
+}
